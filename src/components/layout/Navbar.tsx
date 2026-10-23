@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full shadow-md">
+    <header className="relative z-20 w-full shadow-md">
       
       {/* TIER 1: Top Contact & Statutory Ribbon (Full Width) */}
       <div className="w-full bg-[#111827] text-slate-200 text-xs px-4 sm:px-8 lg:px-12 py-1.5 border-b border-slate-800">

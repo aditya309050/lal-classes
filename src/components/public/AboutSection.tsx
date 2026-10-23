@@ -8,6 +8,7 @@ import {
   BookOpen, 
   CheckCircle, 
   ArrowRight,
+  ArrowUpRight,
   Sparkles,
   Users,
   Compass
@@ -139,30 +140,72 @@ export const AboutSection: React.FC = () => {
         {/* Vision & Mission Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-red-100 rounded-bl-full -mr-4 -mt-4 opacity-50"></div>
-            <div className="flex items-center space-x-3 mb-4">
-              <span className="p-3 rounded-xl bg-red-100 text-red-800">
-                <Eye className="w-6 h-6" />
-              </span>
-              <h3 className="text-xl font-black text-slate-900 font-['Outfit']">OUR VISION</h3>
+          {/* Card 1: Our Vision */}
+          <div className="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-2xl bg-[#FDECEB] flex items-center justify-center text-[#990000] border border-red-100/60 shadow-2xs">
+                <Eye className="w-6 h-6 stroke-[2.2]" />
+              </div>
+              
+              {/* Title */}
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-['Outfit'] mt-6 mb-3 group-hover:text-red-900 transition-colors">
+                Our Vision
+              </h3>
+              
+              {/* Description */}
+              <p className="text-slate-600 text-sm sm:text-[15px] leading-relaxed">
+                Building a learning environment where every child can grow, achieve and excel.
+              </p>
             </div>
-            <p className="text-sm text-slate-600 leading-relaxed text-justify">
-              Lal Classes Concept School is committed to provide high quality resources to enable a student to achieve a better and more fulfilled level of value-based education. We envision building an academic atmosphere where every child from Bihar Sharif and surrounding regions achieves entrance mastery at the national level.
-            </p>
+
+            {/* Bottom Action Link */}
+            <div className="pt-6 mt-4">
+              <button
+                onClick={() => {
+                  setActiveView('admissions');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-[#990000] hover:text-red-800 transition-colors cursor-pointer group/link"
+              >
+                <span>Our future</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+              </button>
+            </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-amber-100 rounded-bl-full -mr-4 -mt-4 opacity-50"></div>
-            <div className="flex items-center space-x-3 mb-4">
-              <span className="p-3 rounded-xl bg-amber-100 text-amber-800">
-                <Target className="w-6 h-6" />
-              </span>
-              <h3 className="text-xl font-black text-slate-900 font-['Outfit']">OUR MISSION</h3>
+          {/* Card 2: Our Mission */}
+          <div className="bg-white rounded-3xl p-7 sm:p-9 border border-slate-200/80 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-2xl bg-[#FEF6E0] flex items-center justify-center text-[#92400e] border border-amber-200/60 shadow-2xs">
+                <Target className="w-6 h-6 stroke-[2.2]" />
+              </div>
+              
+              {/* Title */}
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 font-['Outfit'] mt-6 mb-3 group-hover:text-amber-900 transition-colors">
+                Our Mission
+              </h3>
+              
+              {/* Description */}
+              <p className="text-slate-600 text-sm sm:text-[15px] leading-relaxed">
+                Developing confident, responsible students with strong concepts and critical-thinking skills.
+              </p>
             </div>
-            <p className="text-sm text-slate-600 leading-relaxed text-justify">
-              To develop superb all-around, confident, and responsible individuals who aspire to achieve their full potential. We foster our students' love for learning, encourage them to ask questions, develop critical problem-solving skills, and prepare them rigorously for competitive entrance tests.
-            </p>
+
+            {/* Bottom Action Link */}
+            <div className="pt-6 mt-4">
+              <button
+                onClick={() => {
+                  setActiveView('courses');
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-[#92400e] hover:text-amber-800 transition-colors cursor-pointer group/link"
+              >
+                <span>Our purpose</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+              </button>
+            </div>
           </div>
 
         </div>
